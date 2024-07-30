@@ -12,3 +12,10 @@ CREATE TABLE patients (
 );
 
 INSERT INTO admins (username, password) VALUES ('admin', 'password');
+
+INSERT INTO patients (name, code, arrival_time) VALUES ('John Doe', 'JDO', EXTRACT(EPOCH FROM now())::bigint);
+INSERT INTO patients (name, code, arrival_time) VALUES ('Jane Smith', 'JSM', EXTRACT(EPOCH FROM now())::bigint);
+INSERT INTO patients (name, code, arrival_time) VALUES ('Alice Johnson', 'AJN', EXTRACT(EPOCH FROM now())::bigint);
+INSERT INTO patients (name, code, arrival_time) VALUES ('Bob Brown', 'BBR', EXTRACT(EPOCH FROM now())::bigint);
+INSERT INTO patients (name, code, arrival_time) VALUES ('Charlie Delta', 'CDE', EXTRACT(EPOCH FROM now())::bigint);
+INSERT INTO patients (name, code, arrival_time) VALUES ('Eve Frank', 'EFR', EXTRACT(EPOCH FROM now())::bigint);
