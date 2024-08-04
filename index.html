@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Triage Application</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Hospital Triage System</h1>
-        <div class="login-container">
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button id="patientViewBtn">Patient Sign-In</button>
+            <button id="adminViewBtn">Admin Panel</button>
+        </div>
+
+        <!-- Admin Login Section -->
+        <div id="adminLoginSection" style="display:none;">
             <h2>Admin Login</h2>
             <form id="adminLoginForm">
                 <input type="text" id="adminUsername" placeholder="Username" required>
@@ -17,14 +25,27 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div class="patient-container">
+
+        <!-- Patient Sign-In Section -->
+        <div id="patientSignInSection">
             <h2>Patient Sign-In</h2>
             <form id="patientSignInForm">
                 <input type="text" id="patientName" placeholder="Name" required>
                 <input type="text" id="patientCode" placeholder="3-Letter Code" required maxlength="3">
+                <select id="injurySeverity">
+                    <option value="1">Minor</option>
+                    <option value="2">Moderate</option>
+                    <option value="3">Severe</option>
+                </select>
                 <button type="submit">Sign In</button>
             </form>
             <div id="waitTimeDisplay"></div>
+        </div>
+
+        <!-- Admin Panel Section -->
+        <div id="adminPanel" style="display:none;">
+            <h2>Admin Panel: Patient Queue</h2>
+            <ul id="patientQueue"></ul>
         </div>
     </div>
     <script src="main.js"></script>

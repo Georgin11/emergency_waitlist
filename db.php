@@ -2,9 +2,9 @@
 function getDbConnection() {
     $host = 'localhost';
     $db = 'hospital';
-    $user = 'postgres';
-    $pass = 'password';
-    $charset = 'utf8mb4';
+    $user = 'postgres';  // Replace with your DB username
+    $pass = 'yourpassword';  // Replace with your DB password
+    $charset = 'utf8';
 
     $dsn = "pgsql:host=$host;dbname=$db;charset=$charset";
     $options = [
